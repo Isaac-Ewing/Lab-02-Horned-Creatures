@@ -4,9 +4,9 @@ import ImageItem from "./ImageItem.js";
 export default class ImageList extends React.Component {
     render() {
         return (
-            <>
-                {this.props.images.map(data => <ImageItem url={data.url} key={data.description}/>)}
-            </>
+            <div id="images">
+                {this.props.images.map(data => <ImageItem url={data.url} key={data.description} description={data.description}/>)}
+            </div>
         );
     }
 }
